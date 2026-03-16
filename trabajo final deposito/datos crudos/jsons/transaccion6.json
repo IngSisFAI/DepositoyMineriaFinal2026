@@ -1,0 +1,32 @@
+[
+    {
+      "transaction_id": null,
+      "timestamp": null,
+      "transaction_hour": null,
+      "amount": 999999999999.99,
+      "merchant_category": "travel",
+      "cardholder": null,
+      "device": {
+        "device_type": "desktop",
+        "operating_system": "linux",
+        "device_trust_score": 60
+      },
+      "network_features": {
+        "velocity_last_24h": 8.0,
+        "ip_risk_score": 0.25
+      },
+      "location": {
+        "city": "Salta",
+        "country": "Argentina",
+        "is_foreign_transaction": false
+      },
+      "authentication": {
+        "method": "biometric",
+        "failed_attempts": 0
+      },
+      "labels": {
+        "is_fraud": false
+      }
+    }
+  ]
+  

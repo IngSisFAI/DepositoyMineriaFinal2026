@@ -1,0 +1,34 @@
+[
+  {
+    "transaction_id": "TX-2024-00045877",
+    "timestamp": "2024-07-11T03:42:19Z",
+    "transaction_hour": 3,
+    "amount": 1299.99,
+    "merchant_category": "electronics",
+    "cardholder": {
+      "age": 41,
+      "country": "US"
+    },
+    "device": {
+      "device_type": "mobile",
+      "operating_system": "android",
+      "device_trust_score": 37
+    },
+    "network_features": {
+      "velocity_last_24h": 19.0,
+      "ip_risk_score": 0.45
+    },
+    "location": {
+      "city": "Miami",
+      "country": "United States",
+      "is_foreign_transaction": true
+    },
+    "authentication": {
+      "method": "pin",
+      "failed_attempts": 1
+    },
+    "labels": {
+      "is_fraud": true
+    }
+  }
+]

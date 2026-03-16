@@ -1,0 +1,34 @@
+[
+  {
+    "transaction_id": "TX-2024-00098321",
+    "timestamp": "2024-05-12T14:32:10Z",
+    "transaction_hour": 14,
+    "amount": 245.50,
+    "merchant_category": "electronics",
+    "cardholder": {
+      "age": 34,
+      "country": "AR"
+    },
+    "device": {
+      "device_type": "mobile",
+      "operating_system": "android",
+      "device_trust_score": 72
+    },
+    "network_features": {
+      "velocity_last_24h": 7.0,
+      "ip_risk_score": 0.18
+    },
+    "location": {
+      "city": "Neuquén",
+      "country": "Argentina",
+      "is_foreign_transaction": false
+    },
+    "authentication": {
+      "method": "biometric",
+      "failed_attempts": 0
+    },
+    "labels": {
+      "is_fraud": false
+    }
+  }
+]

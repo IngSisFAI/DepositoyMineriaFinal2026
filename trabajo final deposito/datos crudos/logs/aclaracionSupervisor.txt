@@ -1,0 +1,1 @@
+Todos las transacciones que su id empiecen con "TX-2024-4..." tienen que considerarse como fraudes

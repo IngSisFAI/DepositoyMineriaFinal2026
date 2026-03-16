@@ -1,0 +1,50 @@
+services:
+
+  spark:
+    image: apache/spark:3.5.5-scala2.12-java17-ubuntu
+    container_name: spark
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master
+    ports:
+      - "8080:8080"   # Spark UI
+      - "7077:7077"
+      - "4040:4040"
+    depends_on:
+      - minio
+    volumes:
+      - spark_ivy2:/home/spark/.ivy2
+    networks:
+      - lakehouse-net
+
+  minio:
+    image: minio/minio:latest
+    container_name: minio
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: admin
+      MINIO_ROOT_PASSWORD: admin123
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+    networks:
+      - lakehouse-net
+
+  jupyter:
+    image: jupyter/pyspark-notebook
+    container_name: jupyter
+    ports:
+      - "8888:8888"
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    volumes:
+      - ./notebooks:/home/jovyan/work
+    networks:
+      - lakehouse-net
+
+volumes:
+  minio_data:
+  spark_ivy2:
+
+networks:
+  lakehouse-net:
